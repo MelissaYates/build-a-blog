@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles.css') }}">
+    </head>
+<body>
+    <header>
+        <nav>
+            <li class = "menu"><a href={{url_for('blog', default='All')}}>View All Blogs</a></li>
+            <li class = "menu"><a href={{url_for('addblog')}}>Add A Blog</a></li>
+        </nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+</body>
+</html>
+
